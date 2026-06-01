@@ -1,0 +1,73 @@
+{
+  "repo": "webreactiva/skills",
+  "site": "https://webreactiva.com/skills",
+  "categories": [
+    {
+      "slug": "career",
+      "title": "Career",
+      "description": "Your developer brand, communication and growth."
+    },
+    {
+      "slug": "engineering",
+      "title": "Engineering",
+      "description": "Version control, code review and day-to-day craft."
+    },
+    {
+      "slug": "work-in-progress",
+      "title": "Work in Progress",
+      "description": "Built in public. Rough edges on purpose."
+    }
+  ],
+  "skills": [
+    {
+      "slug": "politenizer",
+      "name": "politenizer",
+      "title": "Politenizer",
+      "description": "Transform blunt, rude, angry, or profanity-laden outbursts into courteous, well-reasoned, persuasive messages — in the same language as the input — offered in three registers (diplomatic, professional, formal). Use this skill whenever the user wants to soften or rephrase a harsh message, pastes an angry or vulgar rant they need to send to a colleague, boss, client, or teammate, or says things like \"politenize this\", \"make this more polite/professional/ diplomatic\", \"how do I say this without sounding rude\", \"tone this down\", \"reformula esto educadamente\", \"suaviza este mensaje\", \"dilo de forma profesional\", or \"help me not sound like a jerk\". Also trigger when someone shares a heated reaction to a design, PR, email, proposal, or piece of work and wants to deliver the criticism constructively while still making their point convincingly. Do not trigger for neutral copy editing, grammar fixes, or translation that has nothing to do with reducing rudeness or hostility.",
+      "summary": "Turn blunt, angry, or profanity-laden messages into courteous, persuasive ones — in three registers, in the user's own language.",
+      "category": "career",
+      "status": "stable",
+      "tags": [
+        "writing",
+        "communication",
+        "tone",
+        "career",
+        "ai"
+      ],
+      "lang": [
+        "en",
+        "es"
+      ],
+      "featured": true,
+      "path": "skills/career/politenizer",
+      "repoUrl": "https://github.com/webreactiva/skills/tree/main/skills/career/politenizer",
+      "install": "npx skills add webreactiva/skills --skill politenizer",
+      "canonicalUrl": "https://webreactiva.com/skills/politenizer",
+      "argumentHint": "<message to soften> [short|long] [no-help]"
+    },
+    {
+      "slug": "git-commit-organizer",
+      "name": "git-commit-organizer",
+      "title": "Git Commit Organizer",
+      "description": "Organize pending git changes into logical, well-structured commits that follow the Conventional Commits specification, in English. Use this skill whenever the user wants to commit work, \"organize my commits\", \"split my changes into logical commits\", \"commit what we have\", \"save these changes to git\", \"tidy up my history before a PR\", or invokes /commit — including partial asks like \"commit the auth stuff\" or \"just commit the config\". It reads git status and diffs, groups related changes into atomic commits, proposes the messages, and only commits after explicit approval. Optionally it adds gitmoji prefixes, an issue reference (auto-detected from the branch when present), and folder exclusions. It never pushes. Do not trigger for writing code, resolving merge conflicts, or opening pull/merge requests — only for turning pending changes into commits.",
+      "summary": "Organize pending git changes into clean, atomic Conventional Commits — proposed for your approval, never pushed.",
+      "category": "engineering",
+      "status": "stable",
+      "tags": [
+        "git",
+        "commits",
+        "conventional-commits",
+        "workflow"
+      ],
+      "lang": [
+        "en"
+      ],
+      "featured": false,
+      "path": "skills/engineering/git-commit-organizer",
+      "repoUrl": "https://github.com/webreactiva/skills/tree/main/skills/engineering/git-commit-organizer",
+      "install": "npx skills add webreactiva/skills --skill git-commit-organizer",
+      "canonicalUrl": "https://webreactiva.com/skills/git-commit-organizer",
+      "argumentHint": "[#issue] [gitmoji] [exclude <folders>]"
+    }
+  ]
+}

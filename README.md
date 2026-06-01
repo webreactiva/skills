@@ -1,0 +1,88 @@
+<div align="center">
+
+# Web Reactiva Skills
+
+**Agent Skills for real developers — practical, human, no hype.**
+Built in public by the [Web Reactiva](https://webreactiva.com) community.
+
+[![Browse the catalog](https://img.shields.io/badge/browse-webreactiva.com%2Fskills-2ea44f)](https://webreactiva.com/skills)
+
+</div>
+
+A growing, curated collection of [Agent Skills](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview)
+you can drop into Claude Code, OpenCode, Codex, Cursor and many other agents with a single
+command. Each skill is one focused, reusable capability — the kind of thing you teach an
+agent once and never explain again.
+
+Browse the full, filterable catalog at **[webreactiva.com/skills](https://webreactiva.com/skills)**.
+
+## Quickstart
+
+Install **all** the skills into the current project:
+
+```bash
+npx skills add webreactiva/skills
+```
+
+Install **one** skill by name:
+
+```bash
+npx skills add webreactiva/skills --skill politenizer
+```
+
+Add `-g` to install globally (`~/.claude/skills`) instead of in the current project.
+Distribution is powered by [skills.sh](https://skills.sh), which supports 50+ agents.
+
+## Skills
+
+<!-- skills:start -->
+### Career
+
+| Skill | What it does | Install |
+| --- | --- | --- |
+| [`politenizer`](skills/career/politenizer) | Turn blunt, angry, or profanity-laden messages into courteous, persuasive ones — in three registers, in the user's own language. | `npx skills add webreactiva/skills --skill politenizer` |
+
+### Engineering
+
+| Skill | What it does | Install |
+| --- | --- | --- |
+| [`git-commit-organizer`](skills/engineering/git-commit-organizer) | Organize pending git changes into clean, atomic Conventional Commits — proposed for your approval, never pushed. | `npx skills add webreactiva/skills --skill git-commit-organizer` |
+<!-- skills:end -->
+
+### 🚧 Work in progress (build in public)
+
+We ship in the open. Skills under [`skills/work-in-progress/`](skills/work-in-progress) are
+unfinished **on purpose** — peek at them, give feedback, and watch them grow.
+_(Nothing here yet — the first one is on its way.)_
+
+## Philosophy
+
+This is the [Web Reactiva](https://webreactiva.com) take on Agent Skills: small, sharp tools
+that solve a real problem a developer actually has, written the way we'd explain them to a
+colleague. We follow the *malandriner* mindset — pragmatic, human-centered, allergic to hype.
+A skill earns its place by being useful on a normal Tuesday, not by being clever.
+
+What every skill here holds to:
+
+- **One job, done well.** A skill is a single capability, not a framework.
+- **Honest by default.** No invented facts, no fake confidence. If a skill can't know
+  something, it asks or says so.
+- **Human on the other end.** The output is for a person — readable, kind, and still convinced.
+- **Built in public.** Half-finished is fine if it's labeled — see [`work-in-progress/`](skills/work-in-progress).
+
+The repo is in **English** so it travels, but the voice keeps the Web Reactiva warmth.
+
+## How it's organized
+
+- A skill lives at `skills/<category>/<slug>/SKILL.md`.
+- **Category** is just the parent folder — moving a skill is a `git mv`.
+- **Status** is the top folder: `work-in-progress/` means it's still cooking; everything else is stable.
+- Extra metadata for the website (summary, tags, languages, featured) lives in
+  [`skills-catalog.json`](skills-catalog.json), which is **generated** — run `npm run build:catalog`
+  after adding or moving a skill. The `SKILL.md` frontmatter stays 100% standard.
+
+See [`CONTRIBUTING.md`](CONTRIBUTING.md) to add or move a skill.
+
+## License
+
+[MIT](LICENSE) — use them, fork them, make them yours.
