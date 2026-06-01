@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://webreactiva.com/skills/skills-catalog.schema.json",
+  "title": "Web Reactiva Skills Catalog",
+  "description": "Generated catalog consumed by webreactiva.com/skills. Built by scripts/build-catalog.mjs.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["repo", "site", "categories", "skills"],
+  "properties": {
+    "repo": { "type": "string", "description": "owner/repo on GitHub" },
+    "site": { "type": "string", "format": "uri" },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["slug", "title", "description"],
+        "properties": {
+          "slug": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "title": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "slug", "name", "title", "description", "summary",
+          "category", "status", "tags", "lang", "featured",
+          "path", "repoUrl", "install", "canonicalUrl"
+        ],
+        "properties": {
+          "slug": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "name": { "type": "string", "description": "Frontmatter name; what `--skill` matches." },
+          "title": { "type": "string" },
+          "description": { "type": "string", "description": "Full frontmatter description." },
+          "summary": { "type": "string", "description": "Short, web-facing one-liner." },
+          "category": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "status": { "type": "string", "enum": ["stable", "beta", "wip", "deprecated"] },
+          "tags": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+          "lang": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+          "featured": { "type": "boolean" },
+          "argumentHint": { "type": "string" },
+          "path": { "type": "string" },
+          "repoUrl": { "type": "string", "format": "uri" },
+          "install": { "type": "string" },
+          "canonicalUrl": { "type": "string", "format": "uri" }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+# Local-only files (plans, notes) — never committed
+*.local.md
+
+# macOS
+.DS_Store
+
+# Node
+node_modules/
+
+# Archives / build junk
+*.zip
+
+# Installed/linked skill artifacts — the source of truth lives under skills/
+.claude/
+.agents/
