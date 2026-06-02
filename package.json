@@ -12,6 +12,7 @@
   },
   "scripts": {
     "build:catalog": "node scripts/build-catalog.mjs",
+    "sync:web": "node scripts/sync-web.mjs",
     "check": "node scripts/build-catalog.mjs --check"
   },
   "engines": {

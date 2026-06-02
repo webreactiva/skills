@@ -17,7 +17,7 @@
  *   node scripts/build-catalog.mjs --check   # fail if anything is missing or out of date (CI)
  */
 
-import { readFileSync, writeFileSync, readdirSync, statSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, readdirSync, statSync, existsSync, realpathSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -101,7 +101,7 @@ function scanSkills() {
   return found;
 }
 
-function buildCatalog(existing) {
+export function buildCatalog(existing) {
   const handBySlug = new Map((existing.skills || []).map((s) => [s.slug, s]));
   const categories = existing.categories || DEFAULT_CATEGORIES;
   const order = new Map(categories.map((c, i) => [c.slug, i]));
@@ -140,6 +140,9 @@ function buildCatalog(existing) {
       canonicalUrl: `${SITE}/${slug}`,
     };
     if (fm["argument-hint"]) entry.argumentHint = fm["argument-hint"];
+    // webUrl is synced from the website RSS feed (npm run sync:web), not derived from
+    // the tree — preserve it across builds so build:catalog/check stay offline.
+    if (hand.webUrl) entry.webUrl = hand.webUrl;
     return entry;
   });
 
@@ -162,14 +165,27 @@ function renderSkillsMarkdown(catalog) {
     if (!byCat.has(s.category)) byCat.set(s.category, []);
     byCat.get(s.category).push(s);
   }
+  // Show the "Page" column only when at least one published skill has a webUrl
+  // (synced from the site). Keeps the table clean before anything is live.
+  const rendered = catalog.skills.filter((s) => s.category !== "work-in-progress");
+  const hasWeb = rendered.some((s) => s.webUrl);
+  const header = hasWeb
+    ? "| Skill | What it does | Page | Install |"
+    : "| Skill | What it does | Install |";
+  const divider = hasWeb ? "| --- | --- | --- | --- |" : "| --- | --- | --- |";
   const out = [];
   for (const cat of catalog.categories) {
     if (cat.slug === "work-in-progress") continue;
     const items = byCat.get(cat.slug);
     if (!items || !items.length) continue;
-    out.push(`### ${cat.title}`, "", "| Skill | What it does | Install |", "| --- | --- | --- |");
+    out.push(`### ${cat.title}`, "", header, divider);
     for (const s of items) {
-      out.push(`| [\`${s.name}\`](${s.path}) | ${s.summary} | \`${s.install}\` |`);
+      const page = s.webUrl ? `[web ↗](${s.webUrl})` : "—";
+      out.push(
+        hasWeb
+          ? `| [\`${s.name}\`](${s.path}) | ${s.summary} | ${page} | \`${s.install}\` |`
+          : `| [\`${s.name}\`](${s.path}) | ${s.summary} | \`${s.install}\` |`
+      );
     }
     out.push("");
   }
@@ -184,20 +200,31 @@ function renderReadme(md, catalog) {
   return md.replace(re, `${start}\n${renderSkillsMarkdown(catalog)}\n${end}`);
 }
 
-function main() {
-  const check = process.argv.includes("--check");
-  const existing = existsSync(CATALOG_PATH)
+export function loadExisting() {
+  return existsSync(CATALOG_PATH)
     ? JSON.parse(readFileSync(CATALOG_PATH, "utf8"))
     : { categories: DEFAULT_CATEGORIES, skills: [] };
+}
 
-  const { catalog, problems } = buildCatalog(existing);
-  const catalogOut = JSON.stringify(catalog, null, 2) + "\n";
-
+/** Write the catalog JSON and refresh the README skills table from it. */
+export function writeOutputs(catalog) {
+  writeFileSync(CATALOG_PATH, JSON.stringify(catalog, null, 2) + "\n");
   const readmeIn = existsSync(README_PATH) ? readFileSync(README_PATH, "utf8") : null;
-  const readmeOut = readmeIn != null ? renderReadme(readmeIn, catalog) : null;
+  if (readmeIn != null) {
+    const readmeOut = renderReadme(readmeIn, catalog);
+    if (readmeOut !== readmeIn) writeFileSync(README_PATH, readmeOut);
+  }
+}
+
+function main() {
+  const check = process.argv.includes("--check");
+  const { catalog, problems } = buildCatalog(loadExisting());
 
   if (check) {
+    const catalogOut = JSON.stringify(catalog, null, 2) + "\n";
     const catalogNow = existsSync(CATALOG_PATH) ? readFileSync(CATALOG_PATH, "utf8") : "";
+    const readmeIn = existsSync(README_PATH) ? readFileSync(README_PATH, "utf8") : null;
+    const readmeOut = readmeIn != null ? renderReadme(readmeIn, catalog) : null;
     const catalogDrift = catalogNow !== catalogOut;
     const readmeDrift = readmeIn != null && readmeOut !== readmeIn;
     if (problems.length) console.error("✗ Catalog problems:\n - " + problems.join("\n - "));
@@ -209,9 +236,11 @@ function main() {
   }
 
   if (problems.length) console.warn("⚠ Catalog warnings:\n - " + problems.join("\n - "));
-  writeFileSync(CATALOG_PATH, catalogOut);
-  if (readmeOut != null && readmeOut !== readmeIn) writeFileSync(README_PATH, readmeOut);
+  writeOutputs(catalog);
   console.log(`✓ Wrote skills-catalog.json (${catalog.skills.length} skill(s)) and refreshed README.`);
 }
 
-main();
+// Run the CLI only when invoked directly, so sync-web.mjs can import the helpers above.
+const invokedDirectly =
+  process.argv[1] && realpathSync(process.argv[1]) === fileURLToPath(import.meta.url);
+if (invokedDirectly) main();
