@@ -38,16 +38,16 @@ Distribution is powered by [skills.sh](https://skills.sh), which supports 50+ ag
 <!-- skills:start -->
 ### Career
 
-| Skill | What it does | Install |
-| --- | --- | --- |
-| [`github-profile-readme`](skills/career/github-profile-readme) | Generate a polished GitHub profile README — the special <owner>/<owner> repo — from real account data, for a person, project, or brand. | `npx skills add webreactiva/skills --skill github-profile-readme` |
-| [`politenizer`](skills/career/politenizer) | Turn blunt, angry, or profanity-laden messages into courteous, persuasive ones — in three registers, in the user's own language. | `npx skills add webreactiva/skills --skill politenizer` |
+| Skill | What it does | Page | Install |
+| --- | --- | --- | --- |
+| [`github-profile-readme`](skills/career/github-profile-readme) | Generate a polished GitHub profile README — the special <owner>/<owner> repo — from real account data, for a person, project, or brand. | [web ↗](https://www.webreactiva.com/skills/github-profile-readme) | `npx skills add webreactiva/skills --skill github-profile-readme` |
+| [`politenizer`](skills/career/politenizer) | Turn blunt, angry, or profanity-laden messages into courteous, persuasive ones — in three registers, in the user's own language. | [web ↗](https://www.webreactiva.com/skills/politenizer) | `npx skills add webreactiva/skills --skill politenizer` |
 
 ### Engineering
 
-| Skill | What it does | Install |
-| --- | --- | --- |
-| [`git-commit-organizer`](skills/engineering/git-commit-organizer) | Organize pending git changes into clean, atomic Conventional Commits — proposed for your approval, never pushed. | `npx skills add webreactiva/skills --skill git-commit-organizer` |
+| Skill | What it does | Page | Install |
+| --- | --- | --- | --- |
+| [`git-commit-organizer`](skills/engineering/git-commit-organizer) | Organize pending git changes into clean, atomic Conventional Commits — proposed for your approval, never pushed. | [web ↗](https://www.webreactiva.com/skills/git-commit-organizer) | `npx skills add webreactiva/skills --skill git-commit-organizer` |
 <!-- skills:end -->
 
 ### 🚧 Work in progress (build in public)

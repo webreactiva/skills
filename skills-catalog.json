@@ -43,7 +43,8 @@
       "repoUrl": "https://github.com/webreactiva/skills/tree/main/skills/career/github-profile-readme",
       "install": "npx skills add webreactiva/skills --skill github-profile-readme",
       "canonicalUrl": "https://webreactiva.com/skills/github-profile-readme",
-      "argumentHint": "<github-username> [language]"
+      "argumentHint": "<github-username> [language]",
+      "webUrl": "https://www.webreactiva.com/skills/github-profile-readme"
     },
     {
       "slug": "politenizer",
@@ -69,7 +70,8 @@
       "repoUrl": "https://github.com/webreactiva/skills/tree/main/skills/career/politenizer",
       "install": "npx skills add webreactiva/skills --skill politenizer",
       "canonicalUrl": "https://webreactiva.com/skills/politenizer",
-      "argumentHint": "<message to soften> [short|long] [no-help]"
+      "argumentHint": "<message to soften> [short|long] [no-help]",
+      "webUrl": "https://www.webreactiva.com/skills/politenizer"
     },
     {
       "slug": "git-commit-organizer",
@@ -93,7 +95,8 @@
       "repoUrl": "https://github.com/webreactiva/skills/tree/main/skills/engineering/git-commit-organizer",
       "install": "npx skills add webreactiva/skills --skill git-commit-organizer",
       "canonicalUrl": "https://webreactiva.com/skills/git-commit-organizer",
-      "argumentHint": "[#issue] [gitmoji] [exclude <folders>]"
+      "argumentHint": "[#issue] [gitmoji] [exclude <folders>]",
+      "webUrl": "https://www.webreactiva.com/skills/git-commit-organizer"
     }
   ]
 }
