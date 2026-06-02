@@ -40,6 +40,7 @@ Distribution is powered by [skills.sh](https://skills.sh), which supports 50+ ag
 
 | Skill | What it does | Install |
 | --- | --- | --- |
+| [`github-profile-readme`](skills/career/github-profile-readme) | Generate a polished GitHub profile README — the special <owner>/<owner> repo — from real account data, for a person, project, or brand. | `npx skills add webreactiva/skills --skill github-profile-readme` |
 | [`politenizer`](skills/career/politenizer) | Turn blunt, angry, or profanity-laden messages into courteous, persuasive ones — in three registers, in the user's own language. | `npx skills add webreactiva/skills --skill politenizer` |
 
 ### Engineering

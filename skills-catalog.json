@@ -20,6 +20,32 @@
   ],
   "skills": [
     {
+      "slug": "github-profile-readme",
+      "name": "github-profile-readme",
+      "title": "GitHub Profile README",
+      "description": "Generate a polished GitHub public-profile README from a GitHub username. It researches the account on GitHub (bio, pinned and top repos, languages, website, verified social links) and, when the public profile is thin, asks the user for richer professional context — explicitly suggesting they share a CV, a LinkedIn export (PDF), or a portfolio URL. It writes the README in the conventional GitHub-profile format (centered hero, badges, scannable sections), works in a throwaway clone, and offers to commit & push. If the special <owner>/<owner> repo (or an org's .github repo) does not exist yet, it explains exactly how to create it. Use this skill whenever the user wants to create, write, edit, rewrite, redo, refresh, or improve a GitHub PROFILE README — the \"special repository\" whose README shows on a github.com/<name> profile — or says things like \"profile readme\", \"github profile\", \"readme for my github\", \"make my github look good\", \"present my project/brand on GitHub\", \"set up my username repo\", or asks to showcase a person, project, or organization on their GitHub profile. It asks the user which language to write the README in, defaulting to English and honoring whatever they choose.",
+      "summary": "Generate a polished GitHub profile README — the special <owner>/<owner> repo — from real account data, for a person, project, or brand.",
+      "category": "career",
+      "status": "stable",
+      "tags": [
+        "github",
+        "readme",
+        "profile",
+        "branding",
+        "career"
+      ],
+      "lang": [
+        "en",
+        "es"
+      ],
+      "featured": false,
+      "path": "skills/career/github-profile-readme",
+      "repoUrl": "https://github.com/webreactiva/skills/tree/main/skills/career/github-profile-readme",
+      "install": "npx skills add webreactiva/skills --skill github-profile-readme",
+      "canonicalUrl": "https://webreactiva.com/skills/github-profile-readme",
+      "argumentHint": "<github-username> [language]"
+    },
+    {
       "slug": "politenizer",
       "name": "politenizer",
       "title": "Politenizer",
