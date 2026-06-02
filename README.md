@@ -88,7 +88,9 @@ The repo is in **English** so it travels, but the voice keeps the Web Reactiva w
   [`skills-catalog.json`](skills-catalog.json), which is **generated** — run `npm run build:catalog`
   after adding or moving a skill. The `SKILL.md` frontmatter stays 100% standard.
 
-See [`CONTRIBUTING.md`](CONTRIBUTING.md) to add or move a skill.
+
+<img width="2400" height="1200" alt="github-webreactiva-skills" src="https://github.com/user-attachments/assets/e6b60704-c4bb-4295-8ea9-3b10dbe6e49a" />
+
 
 ## License
 
