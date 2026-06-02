@@ -31,8 +31,11 @@ A catalog of Agent Skills by Web Reactiva, installable via [skills.sh](https://s
   `summary`, `tags`, `lang`, `featured` (and an optional `status`/`title` override). Everything
   else in that file is derived — do not hand-edit it. The one exception is `webUrl`, which is
   **synced** from the website (see below), not hand-edited and not derived from the tree.
-- **`skills-catalog.json` and the README skills table are generated.** After adding, moving, or
-  renaming a skill, run `npm run build:catalog`. CI runs `npm run check` and fails on drift.
+- **`skills-catalog.json` and the README skills tables are generated.** The English `README.md`
+  (grouped by category) and the briefer Spanish `README.es.md` (flat table) both hold their tables
+  between `<!-- skills:start -->`/`<!-- skills:end -->` markers — edit the prose around them, never
+  the table. After adding, moving, or renaming a skill, run `npm run build:catalog`. CI runs
+  `npm run check` and fails on drift in either README.
 - **Web page links are synced from the live site, not invented.** `npm run sync:web` is the only
   script that hits the network: it reads `https://www.webreactiva.com/skills/rss.xml`, matches
   each `<item>` to a skill by slug (`<guid>`), and writes the page URL as `webUrl` into

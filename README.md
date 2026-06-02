@@ -7,6 +7,8 @@ Built in public by the [Web Reactiva](https://webreactiva.com) community.
 
 [![Browse the catalog](https://img.shields.io/badge/browse-webreactiva.com%2Fskills-2ea44f)](https://webreactiva.com/skills)
 
+**English** · [Español](README.es.md)
+
 </div>
 
 A growing, curated collection of [Agent Skills](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview)
@@ -15,6 +17,10 @@ command. Each skill is one focused, reusable capability — the kind of thing yo
 agent once and never explain again.
 
 Browse the full, filterable catalog at **[webreactiva.com/skills](https://webreactiva.com/skills)**.
+
+> [!TIP]
+> 🛠️ **Using skills is great — building your own is how you really learn.**
+> Learn to craft your own skills, step by step, at **[webreactiva.com/guias/crea-skills](https://webreactiva.com/guias/crea-skills)**.
 
 ## Quickstart
 
