@@ -97,6 +97,30 @@
       "canonicalUrl": "https://webreactiva.com/skills/git-commit-organizer",
       "argumentHint": "[#issue] [gitmoji] [exclude <folders>]",
       "webUrl": "https://www.webreactiva.com/skills/git-commit-organizer"
+    },
+    {
+      "slug": "migrate-copilot-instructions",
+      "name": "migrate-copilot-instructions",
+      "title": "Migrate Copilot Instructions",
+      "description": "Migrate a project's GitHub Copilot configuration — global instructions (.github/copilot-instructions.md), path-scoped instructions (.github/instructions/*.instructions.md), prompts (.github/prompts), custom agents (.github/agents), skills (.github/skills), and MCP (.vscode/mcp.json) — into a target coding agent: Claude Code (CLAUDE.md, .claude/rules, .claude/agents, .claude/commands, .claude/skills), Codex (AGENTS.md, ~/.codex), or opencode (AGENTS.md, .opencode), via a portable AGENTS.md. Use this skill whenever the user wants to migrate, port, consolidate, unify, or reconcile Copilot instructions, custom instructions, rules, prompts, agents, or skills to another coding agent, or mentions copilot-instructions.md, AGENTS.md, CLAUDE.md, moving off Copilot to Claude Code / Codex / opencode, or reconciling a .github and a .claude setup. Always detect the target from the repository FIRST; only ask the user when detection is ambiguous.",
+      "summary": "Migrate a project's GitHub Copilot config into Claude Code, Codex, or opencode via a portable AGENTS.md — converting prompts, agents, skills, and MCP, never blind-copying.",
+      "category": "engineering",
+      "status": "stable",
+      "tags": [
+        "copilot",
+        "claude-code",
+        "agents-md",
+        "migration",
+        "mcp"
+      ],
+      "lang": [
+        "en"
+      ],
+      "featured": false,
+      "path": "skills/engineering/migrate-copilot-instructions",
+      "repoUrl": "https://github.com/webreactiva/skills/tree/main/skills/engineering/migrate-copilot-instructions",
+      "install": "npx skills add webreactiva/skills --skill migrate-copilot-instructions",
+      "canonicalUrl": "https://webreactiva.com/skills/migrate-copilot-instructions"
     }
   ]
 }

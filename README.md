@@ -54,6 +54,7 @@ Distribution is powered by [skills.sh](https://skills.sh), which supports 50+ ag
 | Skill | What it does | Page | Install |
 | --- | --- | --- | --- |
 | [`git-commit-organizer`](skills/engineering/git-commit-organizer) | Organize pending git changes into clean, atomic Conventional Commits — proposed for your approval, never pushed. | [web ↗](https://www.webreactiva.com/skills/git-commit-organizer) | `npx skills add webreactiva/skills --skill git-commit-organizer` |
+| [`migrate-copilot-instructions`](skills/engineering/migrate-copilot-instructions) | Migrate a project's GitHub Copilot config into Claude Code, Codex, or opencode via a portable AGENTS.md — converting prompts, agents, skills, and MCP, never blind-copying. | — | `npx skills add webreactiva/skills --skill migrate-copilot-instructions` |
 <!-- skills:end -->
 
 ### 🚧 Work in progress (build in public)
