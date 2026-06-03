@@ -46,7 +46,7 @@ Distribution is powered by [skills.sh](https://skills.sh), which supports 50+ ag
 
 | Skill | What it does | Page | Install |
 | --- | --- | --- | --- |
-| [`migrate-copilot-instructions`](skills/ai-workflow/migrate-copilot-instructions) | Migrate a project's GitHub Copilot config into Claude Code, Codex, or opencode via a portable AGENTS.md — converting prompts, agents, skills, and MCP, never blind-copying. | — | `npx skills add webreactiva/skills --skill migrate-copilot-instructions` |
+| [`migrate-copilot-instructions`](skills/ai-workflow/migrate-copilot-instructions) | Migrate a project's GitHub Copilot config into Claude Code, Codex, or opencode via a portable AGENTS.md — converting prompts, agents, skills, and MCP, never blind-copying. | [web ↗](https://www.webreactiva.com/skills/migrate-copilot-instructions) | `npx skills add webreactiva/skills --skill migrate-copilot-instructions` |
 
 ### Career
 

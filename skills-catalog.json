@@ -46,7 +46,8 @@
       "path": "skills/ai-workflow/migrate-copilot-instructions",
       "repoUrl": "https://github.com/webreactiva/skills/tree/main/skills/ai-workflow/migrate-copilot-instructions",
       "install": "npx skills add webreactiva/skills --skill migrate-copilot-instructions",
-      "canonicalUrl": "https://webreactiva.com/skills/migrate-copilot-instructions"
+      "canonicalUrl": "https://webreactiva.com/skills/migrate-copilot-instructions",
+      "webUrl": "https://www.webreactiva.com/skills/migrate-copilot-instructions"
     },
     {
       "slug": "github-profile-readme",
