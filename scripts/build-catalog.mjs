@@ -40,6 +40,7 @@ const STATUS_BY_FOLDER = {
 // Used only when skills-catalog.json doesn't exist yet. Keep this to categories that
 // actually exist — add a new one only when a skill needs it.
 const DEFAULT_CATEGORIES = [
+  { slug: "ai-workflow", title: "AI Workflow", description: "Get more out of your coding agents." },
   { slug: "career", title: "Career", description: "Your developer brand, communication and growth." },
   { slug: "engineering", title: "Engineering", description: "Version control, code review and day-to-day craft." },
   { slug: "work-in-progress", title: "Work in Progress", description: "Built in public. Rough edges on purpose." },
