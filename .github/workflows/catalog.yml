@@ -13,6 +13,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      # Fails if skills-catalog.json or the README skills table are out of date,
-      # or if any skill is missing required fields. Regenerate with: npm run build:catalog
-      - run: node scripts/build-catalog.mjs --check
+      # Validates every SKILL.md frontmatter (YAML), then fails if
+      # skills-catalog.json or the README skills table are out of date or any
+      # skill is missing required fields. Regenerate with: npm run build:catalog
+      - run: npm run check

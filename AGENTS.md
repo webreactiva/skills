@@ -36,6 +36,12 @@ A catalog of Agent Skills by Web Reactiva, installable via [skills.sh](https://s
   between `<!-- skills:start -->`/`<!-- skills:end -->` markers — edit the prose around them, never
   the table. After adding, moving, or renaming a skill, run `npm run build:catalog`. CI runs
   `npm run check` and fails on drift in either README.
+- **Every `SKILL.md` frontmatter is YAML-linted.** `npm run validate` (run on its own, and first
+  inside `npm run check`) checks each skill's frontmatter with a tiny zero-dependency linter: it
+  flags an unquoted value containing `:` (the classic "mapping values are not allowed" break that
+  the lenient catalog parser would silently accept), unterminated quotes, and a missing `name`,
+  `description`, or `metadata` (author/namespace) block. Quote a tricky `description` (`"…"`) or use
+  a `>-` block — see `github-profile-readme` for the block style.
 - **Web page links are synced from the live site, not invented.** `npm run sync:web` is the only
   script that hits the network: it reads `https://www.webreactiva.com/skills/rss.xml`, matches
   each `<item>` to a skill by slug (`<guid>`), and writes the page URL as `webUrl` into

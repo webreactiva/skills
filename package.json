@@ -13,7 +13,8 @@
   "scripts": {
     "build:catalog": "node scripts/build-catalog.mjs",
     "sync:web": "node scripts/sync-web.mjs",
-    "check": "node scripts/build-catalog.mjs --check"
+    "validate": "node scripts/validate-skills.mjs",
+    "check": "node scripts/validate-skills.mjs && node scripts/build-catalog.mjs --check"
   },
   "engines": {
     "node": ">=18"
