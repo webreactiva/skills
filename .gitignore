@@ -9,6 +9,7 @@ node_modules/
 
 # Archives / build junk
 *.zip
+__pycache__/
 
 # Installed/linked skill artifacts — the source of truth lives under skills/
 .claude/
