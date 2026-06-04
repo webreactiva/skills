@@ -2,13 +2,13 @@
 
 Development-level documentation for the `rubber-duck` webreactiva skill: how it is built, its
 data model, its security properties, and how to audit and test it. This file is
-**not** part of the skill's runtime — it lives under `tests/` alongside the test
-suite and audit script so it never gets confused with the runtime files the
-skill actually loads (`SKILL.md`, `scripts/`, `references/`).
+**not** part of the skill's runtime — the skill only loads `SKILL.md`,
+`scripts/`, and `references/`; this guide and the `tests/` directory are
+developer/meta material.
 
-> Note: `AGENTS.md` conventionally sits at a project root. It is placed under
-> `tests/` here intentionally, to keep all developer/meta material separate from
-> the skill's runtime surface.
+> Note: `AGENTS.md` sits at the skill root, following the usual convention for
+> a developer entry point. Don't confuse it with the runtime instructions the
+> host agent follows — those live in `SKILL.md`.
 
 ## What the skill does
 
@@ -24,13 +24,13 @@ of it so the next run is instant.
 ```
 rubber-duck/
 ├── SKILL.md                      # instructions the host agent follows
+├── AGENTS.md                     # this file — developer guide, NOT loaded at runtime
 ├── scripts/
 │   └── rubber_duck.py            # deterministic plumbing (detection, memory, selection)
 ├── references/
 │   ├── agents.md                 # per-agent markers, config roots, invocations
 │   └── critique-rubric.md        # critic prompt template + severity rubric
 └── tests/                        # ← developer-only, NOT loaded at runtime
-    ├── AGENTS.md                 # this file
     ├── test_rubber_duck.py       # pytest for the pure functions
     └── audit.sh                  # one-command security/quality audit
 ```
