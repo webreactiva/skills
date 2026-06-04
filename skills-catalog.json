@@ -127,6 +127,31 @@
       "canonicalUrl": "https://webreactiva.com/skills/git-commit-organizer",
       "argumentHint": "[#issue] [gitmoji] [exclude <folders>]",
       "webUrl": "https://www.webreactiva.com/skills/git-commit-organizer"
+    },
+    {
+      "slug": "rubber-duck",
+      "name": "rubber-duck",
+      "title": "Rubber Duck",
+      "description": "Get a constructive second opinion on a plan, design, diff, or test suite from a DIFFERENT AI model than the one running the current session. Use this skill whenever the user says \"rubber duck this\", \"/rubber-duck\", \"poke holes in this\", \"get a critique\", \"second opinion\", \"review my plan before I build it\", \"is this approach sound\", or when you are about to commit to a non-trivial design, multi-file change, or architectural decision and want an independent reviewer that does not share your blind spots. Also use it reactively after repeated failed attempts at the same problem. The skill detects the host coding agent AND every other agent CLI installed on the machine, works out which can reach a contrasting model family (the host's own model switch, or a second installed CLI like opencode / codex / copilot / amp / kilo / pi / antigravity), and remembers all of it in an agents.json memory file so the next run is instant.",
+      "summary": "Constructive second opinion on plans, diffs, designs, and tests from a DIFFERENT AI model family — discovers every installed agent CLI, smoke-tests the chosen critic, and remembers it all in a persistent agents.json memory.",
+      "category": "work-in-progress",
+      "status": "wip",
+      "tags": [
+        "code-review",
+        "second-opinion",
+        "multi-agent",
+        "cli",
+        "ai-workflow"
+      ],
+      "lang": [
+        "en"
+      ],
+      "featured": false,
+      "path": "skills/work-in-progress/rubber-duck",
+      "repoUrl": "https://github.com/webreactiva/skills/tree/main/skills/work-in-progress/rubber-duck",
+      "install": "npx skills add webreactiva/skills --skill rubber-duck",
+      "canonicalUrl": "https://webreactiva.com/skills/rubber-duck",
+      "argumentHint": "[agent-cli] [model]"
     }
   ]
 }
