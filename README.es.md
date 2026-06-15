@@ -45,6 +45,7 @@ Añade `-g` para instalarlas en global (`~/.claude/skills`). La distribución us
 <!-- skills:start -->
 | Skill | Qué hace | Página | Instalar |
 | --- | --- | --- | --- |
+| [`handoff-torch`](skills/ai-workflow/handoff-torch) | Generate a self-contained handoff document so any AI coding agent can resume the current task in a fresh conversation with zero prior context — code map, run/test commands, pending steps, and gotchas learned. | — | `npx skills add webreactiva/skills --skill handoff-torch` |
 | [`migrate-copilot-instructions`](skills/ai-workflow/migrate-copilot-instructions) | Migrate a project's GitHub Copilot config into Claude Code, Codex, or opencode via a portable AGENTS.md — converting prompts, agents, skills, and MCP, never blind-copying. | [web ↗](https://www.webreactiva.com/skills/migrate-copilot-instructions) | `npx skills add webreactiva/skills --skill migrate-copilot-instructions` |
 | [`github-profile-readme`](skills/career/github-profile-readme) | Generate a polished GitHub profile README — the special <owner>/<owner> repo — from real account data, for a person, project, or brand. | [web ↗](https://www.webreactiva.com/skills/github-profile-readme) | `npx skills add webreactiva/skills --skill github-profile-readme` |
 | [`politenizer`](skills/career/politenizer) | Turn blunt, angry, or profanity-laden messages into courteous, persuasive ones — in three registers, in the user's own language. | [web ↗](https://www.webreactiva.com/skills/politenizer) | `npx skills add webreactiva/skills --skill politenizer` |

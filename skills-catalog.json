@@ -25,6 +25,30 @@
   ],
   "skills": [
     {
+      "slug": "handoff-torch",
+      "name": "handoff-torch",
+      "title": "Handoff Torch",
+      "description": "Pass the torch: generate a handoff document so the current task can be continued in a fresh AI conversation (with any AI coding agent). Use when the user asks to create a handoff, hand off / pass the torch on the task, write a continuation/handover doc, prepare a context dump for a new chat/session, or says things like \\\"handoff doc\\\", \\\"pass the torch\\\", \\\"continue this in a new session\\\", \\\"write a handover\\\", or \\\"prepare a context dump for the next agent\\\". Writes a structured markdown file under docs/handoff/.",
+      "summary": "Generate a self-contained handoff document so any AI coding agent can resume the current task in a fresh conversation with zero prior context — code map, run/test commands, pending steps, and gotchas learned.",
+      "category": "ai-workflow",
+      "status": "stable",
+      "tags": [
+        "handoff",
+        "context",
+        "ai-workflow",
+        "documentation",
+        "continuation"
+      ],
+      "lang": [
+        "en"
+      ],
+      "featured": false,
+      "path": "skills/ai-workflow/handoff-torch",
+      "repoUrl": "https://github.com/webreactiva/skills/tree/main/skills/ai-workflow/handoff-torch",
+      "install": "npx skills add webreactiva/skills --skill handoff-torch",
+      "canonicalUrl": "https://webreactiva.com/skills/handoff-torch"
+    },
+    {
       "slug": "migrate-copilot-instructions",
       "name": "migrate-copilot-instructions",
       "title": "Migrate Copilot Instructions",

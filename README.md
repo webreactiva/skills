@@ -46,6 +46,7 @@ Distribution is powered by [skills.sh](https://skills.sh), which supports 50+ ag
 
 | Skill | What it does | Page | Install |
 | --- | --- | --- | --- |
+| [`handoff-torch`](skills/ai-workflow/handoff-torch) | Generate a self-contained handoff document so any AI coding agent can resume the current task in a fresh conversation with zero prior context — code map, run/test commands, pending steps, and gotchas learned. | — | `npx skills add webreactiva/skills --skill handoff-torch` |
 | [`migrate-copilot-instructions`](skills/ai-workflow/migrate-copilot-instructions) | Migrate a project's GitHub Copilot config into Claude Code, Codex, or opencode via a portable AGENTS.md — converting prompts, agents, skills, and MCP, never blind-copying. | [web ↗](https://www.webreactiva.com/skills/migrate-copilot-instructions) | `npx skills add webreactiva/skills --skill migrate-copilot-instructions` |
 
 ### Career
