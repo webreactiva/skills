@@ -74,6 +74,30 @@
       "webUrl": "https://www.webreactiva.com/skills/migrate-copilot-instructions"
     },
     {
+      "slug": "pre-mortem",
+      "name": "pre-mortem",
+      "title": "Pre-Mortem",
+      "description": "Imagine how a proposed change will break in production before writing the code. Use this skill whenever the user says \"pre-mortem\", \"premortem\", \"what could break\", \"failure modes\", \"how will this fail\", or after a plan has been approved but before implementation begins for any change touching shared state, payments, migrations, concurrency, auth, or external integrations. Also trigger proactively when the user is about to ship a multi-file change, when the change affects production data, or when \"what could go wrong\" is the right question to ask before code. The skill produces 3-5 ranked failure modes with likelihood, blast radius, and concrete mitigation, then a single recommendation: ship as-is, harden first, or split the change.",
+      "summary": "Imagine the change has already shipped and broken. Surface 3-5 ranked failure modes with likelihood, blast radius, and concrete mitigations, then commit to one of: ship as-is, harden first, or split the change.",
+      "category": "ai-workflow",
+      "status": "stable",
+      "tags": [
+        "pre-mortem",
+        "failure-modes",
+        "risk",
+        "shipping",
+        "ai-workflow"
+      ],
+      "lang": [
+        "en"
+      ],
+      "featured": false,
+      "path": "skills/ai-workflow/pre-mortem",
+      "repoUrl": "https://github.com/webreactiva/skills/tree/main/skills/ai-workflow/pre-mortem",
+      "install": "npx skills add webreactiva/skills --skill pre-mortem",
+      "canonicalUrl": "https://webreactiva.com/skills/pre-mortem"
+    },
+    {
       "slug": "github-profile-readme",
       "name": "github-profile-readme",
       "title": "GitHub Profile README",
