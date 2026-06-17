@@ -59,6 +59,7 @@ Distribution is powered by [skills.sh](https://skills.sh), which supports 50+ ag
 
 | Skill | What it does | Page | Install |
 | --- | --- | --- | --- |
+| [`ascii-flow`](skills/engineering/ascii-flow) | Draw portable ASCII / Unicode diagrams — flows, architecture, sequences, trees — that stay aligned and render anywhere with zero tooling, for code comments, READMEs and commit messages. | — | `npx skills add webreactiva/skills --skill ascii-flow` |
 | [`git-commit-organizer`](skills/engineering/git-commit-organizer) | Organize pending git changes into clean, atomic Conventional Commits — proposed for your approval, never pushed. | [web ↗](https://www.webreactiva.com/skills/git-commit-organizer) | `npx skills add webreactiva/skills --skill git-commit-organizer` |
 <!-- skills:end -->
 

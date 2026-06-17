@@ -104,6 +104,30 @@
       "webUrl": "https://www.webreactiva.com/skills/politenizer"
     },
     {
+      "slug": "ascii-flow",
+      "name": "ascii-flow",
+      "title": "ASCII Flow",
+      "description": "Create clear, well-aligned ASCII / Unicode-art diagrams for software architecture, workflows, processes, control flow, state machines, sequence diagrams, trees, data structures, memory/bit layouts and tables — the kind that live in code comments, READMEs, design docs, commit messages, chat or a terminal. Use this skill whenever the user asks to \"draw\", \"sketch\", \"diagram\" or \"map out\" something in plain text or monospace, mentions an \"ASCII diagram\", \"text diagram\", \"diagram in a comment\", \"box-and-arrow diagram\", a flowchart/architecture/flow they want as text. Also use it when a rendered diagram (Mermaid, Graphviz, an image) is not wanted or not possible and the diagram must be portable plain text. Prefer this over Mermaid whenever the output has to render anywhere with zero tooling.",
+      "summary": "Draw portable ASCII / Unicode diagrams — flows, architecture, sequences, trees — that stay aligned and render anywhere with zero tooling, for code comments, READMEs and commit messages.",
+      "category": "engineering",
+      "status": "stable",
+      "tags": [
+        "ascii",
+        "diagrams",
+        "documentation",
+        "architecture",
+        "readme"
+      ],
+      "lang": [
+        "en"
+      ],
+      "featured": false,
+      "path": "skills/engineering/ascii-flow",
+      "repoUrl": "https://github.com/webreactiva/skills/tree/main/skills/engineering/ascii-flow",
+      "install": "npx skills add webreactiva/skills --skill ascii-flow",
+      "canonicalUrl": "https://webreactiva.com/skills/ascii-flow"
+    },
+    {
       "slug": "git-commit-organizer",
       "name": "git-commit-organizer",
       "title": "Git Commit Organizer",
