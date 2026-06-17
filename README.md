@@ -102,6 +102,30 @@ The repo is in **English** so it travels, but the voice keeps the Web Reactiva w
 <img width="2400" height="1200" alt="github-webreactiva-skills" src="https://github.com/user-attachments/assets/e6b60704-c4bb-4295-8ea9-3b10dbe6e49a" />
 
 
+## The catalog at a glance
+
+```text
+webreactiva/skills · 9 skills, built in the open
+│
+├─ ai-workflow (4) · get more out of your coding agents
+│   ├─ handoff-torch
+│   ├─ migrate-copilot-instructions
+│   ├─ pre-mortem
+│   └─ rubber-duck-chat
+│
+├─ career (2) · your developer brand & communication
+│   ├─ github-profile-readme
+│   └─ politenizer
+│
+├─ engineering (2) · sharp tools for the daily grind
+│   ├─ ascii-flow
+│   └─ git-commit-organizer
+│
+└─ work-in-progress (1) · built in public, still cooking
+    └─ rubber-duck
+```
+
+
 ## License
 
 [MIT](LICENSE) — use them, fork them, make them yours.
