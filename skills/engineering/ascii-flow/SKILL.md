@@ -113,6 +113,42 @@ is the whole game. Discipline:
 For multi-line work, it helps to draft the box skeleton, confirm column positions,
 then add connectors — rather than writing it all in one pass.
 
+### Counting centers — mandatory before drawing any connector
+
+The most common source of broken diagrams is placing connectors by feel instead of
+by arithmetic. Before drawing a single `│`, `┬`, `┴`, or `▼`, compute:
+
+```
+center_col = left_border_col + floor(total_box_width / 2)
+```
+
+For example, a box that starts at column 8 and is 15 characters wide (including
+borders) has its center at column `8 + 7 = 15`. Every connector attached to that
+box — the `┬` at the bottom, the `▼` pointing into it, the stem between them —
+must be in column 15. Write the number down; do not trust your eye.
+
+**Prefer odd total widths.** A box 15 chars wide has an unambiguous center at `+7`.
+A 16-char-wide box has no exact integer center — you must pick +7 or +8 and stick
+to it. Odd widths eliminate the ambiguity.
+
+### Multi-way splits — determine destination centers first
+
+A branch line like `┌──────┼──────────┐` is the hardest structure to get right.
+The wrong order causes misalignment every time:
+
+- **Wrong:** draw the horizontal bar, then place boxes under it.
+- **Right:** determine each destination box's left column and width first, compute
+  each center column, then draw the horizontal bar so its `│`/`┼` junction points
+  land exactly on those columns.
+
+After drawing, trace each branch top-to-bottom and verify three column numbers
+match: (1) the junction on the branch line, (2) the `▼` arrowhead, (3) the `┬`
+or top-border of the destination box. If any three differ, fix before returning.
+
+When a split has unequal branch widths, the connector boxes shift and the
+horizontal bar must stretch asymmetrically — count the offset explicitly rather
+than copy-pasting a symmetric template.
+
 ## Step 4 — Apply the family recipe
 
 Each encoding has a reusable construction pattern with worked templates in
@@ -199,6 +235,8 @@ category.
 - [ ] Spaces only — no tabs, no trailing whitespace.
 - [ ] Wrapped in a fenced block (md/chat) or comment-prefixed (code).
 - [ ] A legend/caption explains anything non-obvious.
+- [ ] **Every connector column was computed arithmetically** (`left_col + floor(width/2)`), not placed by eye.
+- [ ] **For each branch in a split:** junction column = arrowhead column = destination box center column. Traced top-to-bottom and verified.
 
 ---
 
