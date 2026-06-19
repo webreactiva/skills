@@ -56,6 +56,7 @@ Distribution is powered by [skills.sh](https://skills.sh), which supports 50+ ag
 | Skill | What it does | Page | Install |
 | --- | --- | --- | --- |
 | [`github-profile-readme`](skills/career/github-profile-readme) | Generate a polished GitHub profile README — the special <owner>/<owner> repo — from real account data, for a person, project, or brand. | [web ↗](https://www.webreactiva.com/skills/github-profile-readme) | `npx skills add webreactiva/skills --skill github-profile-readme` |
+| [`opinionizer`](skills/career/opinionizer) | Sharpen a hedged, lukewarm draft into a strong, opinionated take — stripping the hedges and dangling caveats off a belief the author already holds, in two or three escalating variants, never manufacturing conviction. Works in any language and answers in the draft's own. | — | `npx skills add webreactiva/skills --skill opinionizer` |
 | [`politenizer`](skills/career/politenizer) | Turn blunt, angry, or profanity-laden messages into courteous, persuasive ones — in three registers, in the user's own language. | [web ↗](https://www.webreactiva.com/skills/politenizer) | `npx skills add webreactiva/skills --skill politenizer` |
 
 ### Engineering

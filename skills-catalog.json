@@ -149,6 +149,31 @@
       "webUrl": "https://www.webreactiva.com/skills/github-profile-readme"
     },
     {
+      "slug": "opinionizer",
+      "name": "opinionizer",
+      "title": "Opinionizer",
+      "description": "Sharpen a hedged, lukewarm draft into a strong, opinionated take that lands and travels — without manufacturing conviction the author doesn't hold. Use this whenever the user is drafting a tweet, thread, LinkedIn post, newsletter intro, blog opener, or any short public writing and says things like \"make this more opinionated\", \"this is too soft\", \"sharpen this take\", \"this sounds wishy-washy\", \"I want a strong opinion / hot take\", \"esto suena flojo\", \"hazlo más contundente\", \"ponle más filo\", or whenever a draft clearly contains a real belief buried under hedges and dangling caveats. Also trigger when the user has a defensible view but writes it so cautiously that it carries no edge. Works in any language and ALWAYS returns the sharpened versions in the same language as the input draft.",
+      "summary": "Sharpen a hedged, lukewarm draft into a strong, opinionated take — stripping the hedges and dangling caveats off a belief the author already holds, in two or three escalating variants, never manufacturing conviction. Works in any language and answers in the draft's own.",
+      "category": "career",
+      "status": "stable",
+      "tags": [
+        "writing",
+        "communication",
+        "opinion",
+        "career",
+        "ai"
+      ],
+      "lang": [
+        "en",
+        "es"
+      ],
+      "featured": false,
+      "path": "skills/career/opinionizer",
+      "repoUrl": "https://github.com/webreactiva/skills/tree/main/skills/career/opinionizer",
+      "install": "npx skills add webreactiva/skills --skill opinionizer",
+      "canonicalUrl": "https://webreactiva.com/skills/opinionizer"
+    },
+    {
       "slug": "politenizer",
       "name": "politenizer",
       "title": "Politenizer",
